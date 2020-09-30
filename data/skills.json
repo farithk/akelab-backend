@@ -25,8 +25,8 @@
 
   "back": {
     "one": {
-      "title": "Portfolio for EML",
-      "description": "portfolio that uses restful APIs to show data and to interactive with users",
+      "title": "Space",
+      "description": "Space game",
       "image": "../images/emlCV.png"
     }
   }
