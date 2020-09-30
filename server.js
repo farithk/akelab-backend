@@ -39,16 +39,11 @@ app.post('/', function(req, res){
   res.sendFile(__dirname +"/views/presentation.html");
 });
 
-app.options('name', cors()); // enable pre-flight request for GET request
-app.get('/name', cors(), function(req, res){
-  res.json(name);
-});
-
 app.options('skills', cors());
 app.get('/skills', cors(), function(req, res){
   res.json(skillsData);
 });
 
 app.listen(process.env.PORT || 3030, () => {
-  console.log("Server Listening on Port 8080");
+  console.log("Server Listening on Port 3030");
 });
