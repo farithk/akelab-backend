@@ -27,8 +27,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(upload.array());
 app.use(express.static(__dirname));
 
-app.get('/', function(req, res){
-  res.sendFile(__dirname +"/index.html");
+app.get('/test1', function(req, res){
+  res.sendFile(__dirname +"/mainPresentation.html");
 });
 
 let name = "";
