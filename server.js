@@ -4,7 +4,7 @@ const multer = require('multer');
 const cors = require('cors');
 const upload = multer();
 const app = express();
-let skillsData = require('./data/skills.json');
+let skillsData = require('./data/movies.json');
 
 
 //Allow cros origin
@@ -39,9 +39,16 @@ app.post('/', function(req, res){
   res.sendFile(__dirname +"/views/presentation.html");
 });
 
-app.options('skills', cors());
-app.get('/skills', cors(), function(req, res){
-  res.json(skillsData);
+app.options('movies', cors());
+app.post('/movies', cors(), function(req, res){
+ 
+  if (req.body.akelab == "123456789"){
+   
+    res.json(skillsData);
+  } else {
+    res.json({error: "Can not get the data due to security reasons"})
+  }
+  
 });
 
 app.listen(process.env.PORT || 3030, () => {
